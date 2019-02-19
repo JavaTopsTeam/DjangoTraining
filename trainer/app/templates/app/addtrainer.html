@@ -1,0 +1,66 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<form class="form-horizontal" method="POST" action="{% url 'addtrainer' %}">
+  {% csrf_token %}
+<fieldset>
+
+<!-- Form Name -->
+<legend>Trainer</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_id">First Name</label>
+  <div class="col-md-4">
+  <input id="product_id" name="firstname" placeholder="First Name" class="form-control input-md" required="" type="text">
+
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_id">Last Name</label>
+  <div class="col-md-4">
+  <input id="product_id" name="lastname" placeholder="Last Name" class="form-control input-md" required="" type="text">
+
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_id">Email-Id</label>
+  <div class="col-md-4">
+  <input id="product_id" name="email" placeholder="Email_Id" class="form-control input-md" required="" type="text">
+
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_id">Description</label>
+  <div class="col-md-4">
+  <input id="product_id" name="description" placeholder="Description" class="form-control input-md" required="" type="text">
+
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_id">Date</label>
+  <div class="col-md-4">
+  <input id="product_id" name="date" placeholder="" class="form-control input-md" required="" type="date">
+
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" type="submit" name="action" class="btn btn-primary">Add</button>
+  </div>
+  </div>
+
+  {% if message %}
+  <p class="text-danger text-center">{{message}}</p>
+  {% endif %}
+
+</fieldset>
+</form>
